@@ -1,8 +1,10 @@
-package mexicanWave
+package mexicanWave_test
 
 import (
 	"reflect"
 	"testing"
+
+	"vanmoof/internal/mexicanWave"
 )
 
 func TestSplit(t *testing.T) {
@@ -19,7 +21,7 @@ func TestSplit(t *testing.T) {
 
 	for name, tc := range tests {
 		t.Run(name, func(t *testing.T) {
-			got := Wave(tc.input)
+			got := mexicanWave.Wave(tc.input)
 			if !reflect.DeepEqual(got, tc.want) {
 				t.Fatalf("Wave(%s) = %v, want: %v", tc.input, got, tc.want)
 			}
