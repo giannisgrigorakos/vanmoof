@@ -12,6 +12,7 @@ func TestSplit(t *testing.T) {
 		input string
 		want  []string
 	}{
+		"empty case":                        {input: "", want: []string{}},
 		"proper wave no extras":             {input: "mary", want: []string{"Mary", "mAry", "maRy", "marY"}},
 		"please everybody get seated first": {input: "mArY", want: []string{"Mary", "mAry", "maRy", "marY"}},
 		"skip empty seats":                  {input: "mA  r.Y", want: []string{"Ma  r.y", "mA  r.y", "ma  R.y", "ma  r.Y"}},

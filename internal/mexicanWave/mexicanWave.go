@@ -8,7 +8,7 @@ import (
 // Wave takes a word as input and returns a Mexican Wave of this word as a slice of strings.
 func Wave(input string) []string {
 	lowerInput := strings.ToLower(input)
-	var result []string
+	result := []string{}
 
 	for i, char := range lowerInput {
 		examChar := string(char)
